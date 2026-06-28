@@ -94,4 +94,12 @@ A copy of the licence can be found in the LICENSE file.
 
 # Trademark
 
-Although the framework
+The **LiVEiT® Framework** is open source and licensed under the GNU General Public License v3.0 (GPLv3).
+
+However, **LiVEiT®** is a registered trademark.
+
+The GPLv3 licence applies to the source code and framework contained within this repository.
+
+The LiVEiT® name, logo, branding and visual identity are protected separately under trademark law and are **not** licensed under GPLv3.
+
+Please refer to **TRADEMARK.md** for guidance on the permitted use of the LiVEiT® brand.
