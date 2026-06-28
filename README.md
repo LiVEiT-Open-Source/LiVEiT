@@ -10,9 +10,11 @@
 
 Welcome to the official GitHub repository for **LiVEiT®**.
 
-LiVEiT® is an open source framework designed to bring together technology, wellbeing and collaboration. It provides a flexible platform for developers, healthcare professionals, charities, educators and communities to build tools that encourage understanding, reflection and positive change.
+LiVEiT® is an open source framework designed to bring together technology, neurodivergent understanding and collaboration. It provides a flexible platform for developers, healthcare professionals, charities, educators and communities to build tools that encourage understanding, reflection and positive change.
 
-The project is released under the **GNU General Public License v3.0 (GPLv3)**, ensuring that improvements made to the project remain available to the wider community.
+This repository focuses on the **LiVEiT® Framework**—its methodology, documentation, HTML implementation, visual design and supporting resources—allowing others to build upon the framework while contributing improvements back to the community.
+
+The project is released under the **GNU General Public License v3.0 (GPLv3)**, ensuring that improvements made to the framework remain available to the wider community.
 
 ---
 
@@ -20,7 +22,7 @@ The project is released under the **GNU General Public License v3.0 (GPLv3)**, e
 
 Our mission is simple:
 
-> To empower people to better understand themselves through open technology, shared knowledge and collaborative innovation.
+> **To empower people to better understand themselves through open technology, shared knowledge and collaborative innovation.**
 
 We believe technology should be accessible, transparent and community-driven.
 
@@ -28,25 +30,38 @@ LiVEiT® has been created to encourage collaboration rather than competition, al
 
 ---
 
-# The LiVEiT® Ecosystem
+# The LiVEiT® Framework
 
-The project currently consists of several connected applications and tools.
+The LiVEiT® Framework is an open collection of concepts, documentation and technologies that anyone can build upon.
 
-## LiVEiT® BASiC
+The framework includes:
 
-A guided wellbeing application introducing the LiVEiT® framework.
+* HTML implementations
+* CSS styling
+* JavaScript components
+* SVG graphics and visual assets
+* The LiVEiT® Circle framework
+* Documentation
+* Templates
+* Example projects
+* Educational resources
 
-## LiVEiT® PRO
+We actively encourage developers to improve, expand and share these resources with the wider community.
 
-Professional tools designed for practitioners, support workers and organisations.
+---
 
-## LiVEiT® PREMiUM
+# Official LiVEiT® Applications
 
-Advanced features providing enhanced collaboration, reporting and secure project management.
+The official LiVEiT® applications are developed separately from this repository.
 
-## LiVEiT® SUiTE
+This repository **does not contain** the proprietary source code for:
 
-Desktop software for building, managing and distributing LiVEiT® projects.
+* LiVEiT® BASiC
+* LiVEiT® PRO
+* LiVEiT® PREMiUM
+* LiVEiT® SUiTE
+
+These applications are official implementations of the LiVEiT® Framework and continue to be developed independently.
 
 ---
 
@@ -56,16 +71,16 @@ LiVEiT® is built on the belief that knowledge grows when it is shared.
 
 We actively encourage:
 
-- Community contributions
-- Bug fixes
-- New ideas
-- Feature improvements
-- Documentation improvements
-- Accessibility improvements
-- Educational use
-- Research
+* Community contributions
+* Bug fixes
+* New ideas
+* Feature improvements
+* Documentation improvements
+* Accessibility improvements
+* Educational use
+* Research
 
-If you improve LiVEiT®, we encourage you to contribute those improvements back to the project so that everyone benefits.
+If you improve the LiVEiT® Framework, we encourage you to contribute those improvements back to the project so that everyone benefits.
 
 ---
 
@@ -79,51 +94,4 @@ A copy of the licence can be found in the LICENSE file.
 
 # Trademark
 
-Although the software is open source, **LiVEiT®** is a registered trademark.
-
-The GPL licence applies to the source code.
-
-The LiVEiT® name, logo and branding are protected separately and are not granted under the GPL licence.
-
-Please see our future Trademark Policy for guidance on acceptable use of the LiVEiT® brand.
-
----
-
-# Contributing
-
-We welcome contributions from developers, designers, researchers, clinicians, educators and members of the wider community.
-
-Contribution guidelines will be published shortly.
-
----
-
-# Roadmap
-
-Current priorities include:
-
-- Documentation
-- Developer guides
-- Public APIs
-- Sample projects
-- Cross-platform support
-- Community contributions
-
----
-
-# Community
-
-Everyone is welcome.
-
-Whether you are writing code, improving documentation, reporting bugs or sharing ideas, your contribution helps strengthen the project.
-
----
-
-# Website
-
-https://www.gr0w.info
-
----
-
-© LiVEiT® Open Source Project
-
-LiVEiT® is a registered trademark. All rights reserved where applicable.
+Although the framework
