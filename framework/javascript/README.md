@@ -27,3 +27,29 @@ javascript/
 ├── modal.js
 ├── navigation.js
 └── accessibility.js
+
+## Design Philosophy
+
+JavaScript should enhance the framework without making it unnecessarily complex.
+
+The official LiVEiT® implementation should remain:
+
+- Lightweight
+- Predictable
+- Accessible
+- Easy to maintain
+- Framework independent
+
+## Progressive Enhancement
+
+Where possible, LiVEiT® implementations should remain understandable even if JavaScript is unavailable.
+
+HTML provides the structure.
+
+CSS provides the visual language.
+
+JavaScript provides behaviour.
+
+The framework defines the structure.
+
+The implementation defines the meaning.
