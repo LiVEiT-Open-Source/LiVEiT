@@ -12,7 +12,7 @@ Welcome to the official GitHub repository for **LiVEiT®**.
 
 LiVEiT® is an open source framework designed to bring together technology, neurodivergent understanding and collaboration. It provides a flexible platform for developers, healthcare professionals, charities, educators and communities to build tools that encourage understanding, reflection and positive change.
 
-This repository focuses on the **LiVEiT® Framework**—its methodology, documentation, HTML implementation, visual design and supporting resources—allowing others to build upon the framework while contributing improvements back to the community.
+This repository focuses on the **LiVEiT® Framework** and its methodology, documentation, HTML implementation, visual design and supporting resources allowing others to build upon the framework while contributing improvements back to the community.
 
 The project is released under the **GNU General Public License v3.0 (GPLv3)**, ensuring that improvements made to the framework remain available to the wider community.
 
@@ -24,7 +24,7 @@ Our mission is simple:
 
 > **To empower people to better understand themselves through open technology, shared knowledge and collaborative innovation.**
 
-We believe technology should be accessible, transparent and community-driven.
+We believe technology should be accessible, transparent and community driven.
 
 LiVEiT® has been created to encourage collaboration rather than competition, allowing individuals and organisations to build upon a shared foundation while giving improvements back to the community.
 
