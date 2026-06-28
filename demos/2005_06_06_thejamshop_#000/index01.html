@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiVEiT®</title>
+  <link rel="stylesheet" href="assets/hover_styles01.css">
+  <style>
+    :root {
+      --modal-font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      font-family: var(--modal-font-family);
+      background-color: #ffffff;
+      background-image: url('images/background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+   h1,
+p {
+  text-align: left;
+  color: #ffffff !important;
+}
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+  .modal-content {
+  margin: 10% auto;
+  width: 85%;
+  max-width: 700px;
+  min-height: 500px;
+  border-radius: 24px;
+  overflow: hidden;
+
+  position: relative;
+
+  border: 1px solid rgba(255,255,255,0.25);
+
+  /* Background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* Frosted glass panel */
+.modal-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 100%;
+
+  background: rgba(20,20,20,0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-right: 1px solid rgba(255,255,255,0.15);
+  z-index: 0;
+}
+
+/* Keep content above glass */
+.modal-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Position content inside glass panel */
+#modal-header,
+#modal-text,
+#modal-link {
+  max-width: 38%;
+  margin-left: 35px;
+}
+
+#modal-header {
+  margin-top: 40px;
+  margin-bottom: 25px;
+  font-size: 2.2rem;
+  line-height: 1.1;
+  color: #FFCD47;
+}
+
+#modal-text {
+  color: #ffffff;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+#modal-link {
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 40px; /* Add this */
+  padding: 14px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  color: rgba(255,255,255,0.8);
+  font-size: 42px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #ffffff;
+    }
+
+    a {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #ffffff;  /* button color */
+      color: #333333; /* make text visible on button */
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9em;
+      transition: background-color 1.5s;
+    }
+
+    a:hover {
+      background-color: #ffffff;
+    }
+
+    .back-button-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px auto 50px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .back-button-wrap a {
+      background-color: transparent;
+      padding: 0;
+      border-radius: 999px;
+      transition: none;
+    }
+
+    .back-button-wrap a:hover {
+      background-color: transparent;
+    }
+
+    /* SMOKED GLASS BUTTON */
+
+.aqua-btn {
+  position: relative;
+  width: 110px;
+  height: 34px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  overflow: visible;
+  outline: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(110,110,110,0.45) 0%,
+      rgba(45,45,45,0.35) 100%
+    );
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.20),
+    0 4px 8px rgba(0,0,0,0.20);
+
+  transform: scale(1);
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.18s ease;
+}
+
+.aqua-btn::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  top: 4px;
+  height: 14px;
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.28) 0%,
+      rgba(255,255,255,0.10) 100%
+    );
+
+  pointer-events: none;
+}
+
+.aqua-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,0.08) 0%,
+      rgba(255,255,255,0) 70%
+    );
+
+  pointer-events: none;
+}
+
+.aqua-btn span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  color: rgba(255,255,255,0.92);
+
+  z-index: 5;
+}
+
+.aqua-btn span::before {
+  content: attr(data-text);
+  position: absolute;
+  color: rgba(0,0,0,0.45);
+  filter: blur(4px);
+  transform: translateY(4px);
+  z-index: -1;
+}
+
+.aqua-btn .glow-1,
+.aqua-btn .glow-2,
+.aqua-btn .shine {
+  display: none;
+}
+
+.aqua-btn .outer-glow {
+  position: absolute;
+  left: -16px;
+  right: -16px;
+  top: -6px;
+  bottom: -14px;
+
+  border-radius: 999px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(0,0,0,0.18) 0%,
+      rgba(0,0,0,0.08) 45%,
+      rgba(0,0,0,0) 75%
+    );
+
+  filter: blur(12px);
+  transform: translateY(6px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.aqua-btn:hover {
+  transform: scale(1.03);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.25),
+    0 4px 10px rgba(0,0,0,0.18);
+}
+
+.aqua-btn:hover {
+  transform: scale(1.03);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.25),
+    0 3px 8px rgba(0,0,0,0.15);
+}
+
+.aqua-btn:hover .outer-glow {
+  opacity: 0.35;
+}
+
+.aqua-btn:active {
+  transform: scale(0.97);
+}
+  </style>
+</head>
+<body>
+  <div style="margin-top: 50px;">
+    <h1><center>the jam shop rehearsal studios®</center></h1>
+    <p style="color: #FFcd47; text-align: center;">
+  LiVEiT® PREMiUM licence: #000_2004
+</p>
+
+    <div style="display: flex; justify-content: center; overflow: hidden;">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 400px;">
+        <circle cx="200" cy="40" r="25" fill="#000000 " id="circle12" stroke="#ffffff" stroke-width="1"></circle>
+        <circle cx="280" cy="61" r="25" fill="#000000 " id="circle01" stroke="#ffffff" stroke-width="1"></circle>
+        <circle cx="338" cy="120" r="25" fill="#000000 " id="circle02" stroke="#ffffff" stroke-width="1"></circle>
+        <circle cx="360" cy="200" r="25" fill="#000000 " id="circle03" stroke="#ffffff" stroke-width="1"></circle>
+        <circle cx="338" cy="280" r="25" fill="#000000 " id="circle04" stroke="#ffffff" stroke-width="1"></circle>
+        <circle cx="280" cy="338" r="25" fill="#000000 " id="circle05" stroke="#ffffff" stroke-width="1"></circle>
+        <circle cx="200" cy="360" r="25" fill="#000000 " id="circle06" stroke="#ffffff" stroke-width="1"></circle>
+        <circle cx="120" cy="338" r="25" fill="#000000 " id="circle07" stroke="#ffffff" stroke-width="1"></circle>
+        <circle cx="61" cy="280" r="25" fill="#000000 " id="circle08" stroke="#ffffff" stroke-width="1"></circle>
+        <circle cx="40" cy="200" r="25" fill="#000000 " id="circle09" stroke="#FFcd47" stroke-width="6"></circle>
+        <circle cx="61" cy="120" r="25" fill="#000000 " id="circle10" stroke="#ffffff" stroke-width="1"></circle>
+        <circle cx="120" cy="61" r="25" fill="#000000 " id="circle11" stroke="#ffffff" stroke-width="1"></circle>
+        <image x="125" y="125" width="150" height="150" href="" />
+      </svg>
+    </div>
+
+    <div class="back-button-wrap">
+      <!-- CLIENT EDIT AREA: BACK BUTTON URL START -->
+      <a href="https://gr0w.info" target="_self">
+      <!-- CLIENT EDIT AREA: BACK BUTTON URL END -->
+        <button class="aqua-btn">
+          <div class="outer-glow"></div>
+          <div class="glow-1"></div>
+          <div class="glow-2"></div>
+          <div class="shine"></div>
+          <!-- CLIENT EDIT AREA: BACK BUTTON TEXT START -->
+          <span data-text="BACK">BACK</span>
+          <!-- CLIENT EDIT AREA: BACK BUTTON TEXT END -->
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Keep only ONE modal with a unique ID -->
+  <div class="modal" id="circle-modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-header">Default Header</h2>
+      <p id="modal-text">Default text content goes here.</p>
+      <a href="#" id="modal-link" target="_blank">EXPLORE THE COLLECTiON</a>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('circle-modal');
+    const circles = document.querySelectorAll('circle');
+    const modalHeader = document.getElementById('modal-header');
+    const modalText = document.getElementById('modal-text');
+    const modalLink = document.getElementById('modal-link');
+    const closeModal = document.querySelector('.close');
+
+    const circleData = {
+
+      <!-- CLIENT EDIT AREA: CIRCLE 09 MODAL CONTENT START -->
+      circle09: {
+        header: "WEAR THE STORY, SUPPORT THE MiSSiON", // EDITABLE: modal heading text
+        text: `From rehearsal rooms and the rooftops live lounge sessions to today's community wellbeing projects, the jam shop rehearsal studios® remains part of our story.
+
+Our branded merchandise helps fund the ongoing work of gr0w© and gr0whealthcare©, supporting mental health, technology assistance and community wellbeing initiatives across Pembrokeshire.
+
+When you wear our brand, you're not simply buying merchandise. You're helping us invest back into people, projects and the community.
+
+Every purchase helps us turn creativity into community support.`, // EDITABLE: modal paragraph text
+        link: "https://www.thejamshoprehearsalstudios.com", // EDITABLE: button link URL
+        image: "images/modal.jpg" // EDITABLE: modal background image path
+      },
+      <!-- CLIENT EDIT AREA: CIRCLE 09 MODAL CONTENT END -->
+    };
+
+    circles.forEach(circle => {
+      circle.addEventListener('click', () => {
+        const data = circleData[circle.id];
+        if (data) {
+          const strokeColor = getComputedStyle(circle).stroke;
+          modalHeader.textContent = data.header;
+          modalText.textContent = data.text;
+          modalLink.href = data.link;
+          modalLink.style.backgroundColor = strokeColor;
+          modalHeader.style.color = strokeColor;
+          document.querySelector('.modal-content').style.backgroundImage = `url(${data.image})`;
+          modal.style.display = 'block';
+        } else {
+          console.error(`No data for circle ID: ${circle.id}`);
+        }
+      });
+    });
+
+    closeModal.addEventListener('click', () => modal.style.display = 'none');
+    window.addEventListener('click', event => {
+      if (event.target === modal) modal.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
