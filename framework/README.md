@@ -5,7 +5,7 @@ The official LiVEiT® HTML implementation follows a standard project layout.
 Each project folder is named using the following format:
 
 ```text
-YYYY_MM_DD_ProjectName_#Licence
+YYYY_MM_DD_ProjectName_LiVEiT0001
 ```
 
 Example:
