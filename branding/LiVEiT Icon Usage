@@ -1,0 +1,166 @@
+# LiVEiT® Icon Usage
+
+Icons play an important role within the LiVEiT® Framework by helping users recognise actions, navigate interfaces and understand information quickly.
+
+Icons should support the user experience by providing clear visual cues without replacing descriptive text where it is needed.
+
+---
+
+# Design Principles
+
+Official LiVEiT® icons should be:
+
+* Simple
+* Consistent
+* Recognisable
+* Accessible
+* Scalable
+
+Icons should complement the interface rather than dominate it.
+
+---
+
+# Style
+
+All official icons should maintain a consistent visual style.
+
+Recommended characteristics include:
+
+* Clean geometric shapes
+* Consistent line weights
+* Balanced proportions
+* Minimal visual complexity
+* Clear silhouettes
+
+Mixing multiple icon styles within the same interface should be avoided.
+
+---
+
+# Consistency
+
+Icons representing similar actions should appear visually related.
+
+Maintain consistency in:
+
+* Stroke width
+* Corner radius
+* Visual weight
+* Perspective
+* Alignment
+
+Consistency improves recognition and reduces cognitive load.
+
+---
+
+# Size
+
+Icons should remain clear at all supported sizes.
+
+Typical recommendations include:
+
+| Usage               | Suggested Size |
+| ------------------- | -------------- |
+| Navigation          | 20–24 px       |
+| Buttons             | 20–24 px       |
+| Toolbars            | 24 px          |
+| Lists               | 16–20 px       |
+| Large Feature Icons | 32–64 px       |
+
+Icons should always scale proportionally.
+
+---
+
+# Colour
+
+Icons should use official LiVEiT® colours where appropriate.
+
+Recommended usage includes:
+
+* Neutral colours for standard interface controls.
+* Brand colours for emphasis.
+* White icons on dark backgrounds.
+* Dark icons on light backgrounds.
+
+Colour should never reduce legibility.
+
+---
+
+# Filled and Outlined Icons
+
+Both filled and outlined icons may be used.
+
+However, individual interfaces should remain visually consistent by selecting one primary style for similar controls.
+
+Avoid mixing filled and outlined versions of the same icon within a single interface unless there is a deliberate functional distinction.
+
+---
+
+# Alignment
+
+Icons should align consistently with surrounding text and interface elements.
+
+Maintain:
+
+* Equal padding
+* Consistent spacing
+* Balanced visual positioning
+* Proper vertical alignment
+
+Good alignment contributes to a professional appearance.
+
+---
+
+# Accessibility
+
+Icons should never be the only method used to communicate meaning.
+
+Where appropriate:
+
+* Pair icons with descriptive labels.
+* Provide accessible names for assistive technologies.
+* Ensure sufficient colour contrast.
+* Avoid relying solely on colour to indicate status.
+
+Accessibility should be considered throughout the design process.
+
+---
+
+# Official LiVEiT® Icons
+
+Official LiVEiT® icons supplied with the framework should not be modified.
+
+Do not:
+
+* Stretch icons.
+* Rotate icons unnecessarily.
+* Change proportions.
+* Apply unofficial colours.
+* Add visual effects that alter the intended appearance.
+
+Use only official assets provided within the repository.
+
+---
+
+# Circle Icons
+
+The LiVEiT® circular navigation system is a defining feature of the framework.
+
+Each circle represents a specific functional area within the LiVEiT® methodology and should retain its official colour, structure and visual identity.
+
+These icons should remain consistent across:
+
+* Websites
+* Mobile applications
+* Desktop software
+* Documentation
+* Presentations
+
+Maintaining consistency reinforces recognition throughout the LiVEiT® ecosystem.
+
+---
+
+# Future Development
+
+Additional icons may be introduced as the framework expands.
+
+New icons should follow the same visual principles established throughout this guide to ensure they integrate seamlessly with the existing icon library.
