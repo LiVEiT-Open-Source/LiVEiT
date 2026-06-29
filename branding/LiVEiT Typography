@@ -1,0 +1,197 @@
+# LiVEiT® Typography
+
+Typography is a core element of the LiVEiT® visual identity.
+
+Clear, consistent typography improves readability, accessibility and recognition across every LiVEiT® project.
+
+The goal is to present information in a structured and professional manner while maintaining a modern visual appearance.
+
+---
+
+# Typography Principles
+
+The LiVEiT® Framework follows five typography principles:
+
+* Readability
+* Consistency
+* Simplicity
+* Accessibility
+* Scalability
+
+Typography should support the content rather than compete with it.
+
+---
+
+# Font Selection
+
+LiVEiT® does not require a proprietary typeface.
+
+Official projects should use modern, highly legible fonts that are widely supported across operating systems and web browsers.
+
+Recommended font families include:
+
+| Font            | Typical Use                            |
+| --------------- | -------------------------------------- |
+| Arial           | Default user interfaces                |
+| Helvetica       | Professional print and digital layouts |
+| Inter           | Modern web applications                |
+| System UI Fonts | Native desktop and mobile applications |
+
+Projects should select one primary typeface and use it consistently throughout the interface.
+
+---
+
+# Font Hierarchy
+
+A clear hierarchy helps users understand information quickly.
+
+Typical hierarchy:
+
+| Element     | Purpose                |
+| ----------- | ---------------------- |
+| H1          | Primary page title     |
+| H2          | Major section heading  |
+| H3          | Subsection heading     |
+| H4          | Minor heading          |
+| Body Text   | Primary content        |
+| Caption     | Supporting information |
+| Button Text | Interactive elements   |
+
+Heading levels should follow a logical document structure.
+
+---
+
+# Font Weight
+
+Use font weight to establish emphasis rather than relying on colour alone.
+
+Recommended usage:
+
+| Weight    | Purpose          |
+| --------- | ---------------- |
+| Regular   | Body content     |
+| Medium    | Interface labels |
+| Semi-Bold | Section headings |
+| Bold      | Primary headings |
+
+Excessive use of bold text should be avoided.
+
+---
+
+# Font Size
+
+Typography should remain comfortable to read across all screen sizes.
+
+General guidance:
+
+| Element     | Suggested Size |
+| ----------- | -------------- |
+| H1          | 36–48 px       |
+| H2          | 28–36 px       |
+| H3          | 22–28 px       |
+| Body        | 16–18 px       |
+| Caption     | 12–14 px       |
+| Button Text | 15–18 px       |
+
+These values may be adjusted to suit individual platforms while maintaining visual consistency.
+
+---
+
+# Line Height
+
+Adequate spacing improves readability.
+
+Recommended line heights:
+
+* Body text: 1.5–1.7
+* Headings: 1.2–1.3
+* Captions: 1.4–1.5
+
+Avoid overly compressed or excessively spaced text.
+
+---
+
+# Text Alignment
+
+Unless a specific design requires otherwise:
+
+* Left-align paragraphs.
+* Use centred text sparingly.
+* Avoid fully justified text for digital interfaces.
+
+Consistent alignment improves readability.
+
+---
+
+# Colour
+
+Typography should always maintain sufficient contrast with its background.
+
+Recommended practice:
+
+* Dark text on light backgrounds.
+* Light text on dark backgrounds.
+* Accent colours only for emphasis.
+
+Text should remain readable under all viewing conditions.
+
+---
+
+# Accessibility
+
+Typography should support users with a wide range of visual abilities.
+
+Official LiVEiT® projects should:
+
+* Maintain sufficient colour contrast.
+* Avoid excessively small text.
+* Use clear letter spacing.
+* Avoid decorative fonts for body content.
+* Ensure text scales appropriately on different devices.
+
+Typography should comply with recognised accessibility standards wherever practical.
+
+---
+
+# Responsive Design
+
+Typography should adapt gracefully across:
+
+* Desktop computers
+* Tablets
+* Mobile devices
+* Large displays
+
+Responsive scaling should preserve the established visual hierarchy.
+
+---
+
+# Code and Documentation
+
+Technical documentation should use monospaced fonts for code examples.
+
+Recommended options include:
+
+* Consolas
+* Menlo
+* Monaco
+* SF Mono
+* Courier New
+
+Code blocks should remain visually distinct from body text.
+
+---
+
+# Consistency
+
+A limited number of font families should be used throughout the LiVEiT® ecosystem.
+
+Maintaining consistent typography strengthens the overall identity of the framework and improves the user experience.
+
+---
+
+# Future Development
+
+Typography guidance may evolve as the LiVEiT® Framework expands to new platforms and products.
+
+Any additions should remain consistent with the principles of clarity, accessibility and simplicity that define the LiVEiT® brand.
