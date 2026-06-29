@@ -1,0 +1,164 @@
+# LiVEiT® Logo Specifications
+
+The LiVEiT® logo is the primary visual identifier of the LiVEiT® Framework.
+
+It should be presented consistently across all platforms to maintain recognition, professionalism and brand integrity.
+
+This document defines the official specifications for the LiVEiT® logo family.
+
+---
+
+# Official Logo
+
+The official LiVEiT® wordmark is the primary logo of the framework.
+
+It should be used whenever space permits and should not be recreated, redrawn or modified.
+
+Only official artwork supplied within this repository should be used.
+
+---
+
+# Logo Variations
+
+The official logo library consists of approved variations for different applications.
+
+These include:
+
+* Primary Logo
+* Monochrome Logo
+* White Logo
+* Black Logo
+* Icon Only
+* Horizontal Layout
+* Stacked Layout (where applicable)
+
+No additional variations should be created without approval from the LiVEiT® project.
+
+---
+
+# Preferred Usage
+
+The primary logo should always be the first choice.
+
+Alternative versions should only be used when required by the background colour, available space or production method.
+
+Examples include:
+
+* White logo on dark backgrounds.
+* Black logo on light backgrounds.
+* Monochrome logo for single-colour printing.
+* Icon-only version where space is limited.
+
+---
+
+# Backgrounds
+
+The logo should always remain clearly visible against its background.
+
+Suitable backgrounds include:
+
+* White
+* Black
+* Neutral greys
+* Official LiVEiT® brand colours
+* Clean photographic imagery with sufficient contrast
+
+Avoid placing the logo on visually complex backgrounds that reduce legibility.
+
+---
+
+# File Formats
+
+Official logos are provided in multiple formats to suit different applications.
+
+| Format | Purpose                                       |
+| ------ | --------------------------------------------- |
+| SVG    | Websites, applications and scalable graphics  |
+| PNG    | Digital use with transparency                 |
+| JPG    | Websites, Digital use                         |
+| PDF    | Print production                              |
+
+SVG should be used wherever possible for digital projects.
+
+---
+
+# Aspect Ratio
+
+The logo must always retain its original proportions.
+
+Never:
+
+* Stretch the logo horizontally.
+* Stretch the logo vertically.
+* Compress the logo.
+* Rotate the logo.
+* Skew the logo.
+
+Scaling should always be proportional.
+
+---
+
+# Colour integrity of the official logo
+
+Only official logo colours may be used.
+
+Do not:
+
+* Replace brand colours.
+* Apply gradients unless supplied in an official logo.
+* Add outlines.
+* Add shadows.
+* Apply glow effects.
+* Change opacity.
+
+Any visual effects must be part of the official artwork.
+
+---
+
+# Placement
+
+The logo should be positioned where it can be easily recognised without competing with surrounding content.
+
+Allow sufficient space around the logo to maintain clarity.
+
+Detailed spacing requirements are defined in the **Clear Space** section of this Branding Guide.
+
+---
+
+# Digital Applications
+
+For websites, applications and user interfaces:
+
+* Use SVG whenever possible.
+* Maintain crisp rendering.
+* Do not export unnecessarily large raster images.
+* Preserve transparency where appropriate.
+
+---
+
+# Print Applications
+
+For printed material:
+
+* Use vector artwork whenever possible.
+* Avoid low resolution images.
+* Ensure sufficient contrast against the background.
+* Maintain proportional scaling.
+
+---
+
+# Official Assets
+
+Only logos provided through the official LiVEiT® repository should be considered authentic.
+
+If a required variation does not exist, request a new official asset rather than creating one manually.
+
+---
+
+# Registered Trademark
+
+LiVEiT® is a registered trademark.
+
+The official logo is protected intellectual property and may not be modified, recreated or used in a manner that implies endorsement, ownership or affiliation without permission.
+
+Refer to the Trademark and Commercial Licensing sections of this Branding Guide for further guidance.
