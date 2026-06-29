@@ -1,0 +1,157 @@
+# LiVEiT® Colour Palette
+
+Colour is a fundamental part of the LiVEiT® visual identity.
+
+The official palette has been designed to provide clear visual recognition while supporting accessibility, consistency and intuitive navigation throughout the LiVEiT® Framework.
+
+Each colour has a defined purpose and should be used consistently across applications, documentation and supporting material.
+
+---
+
+# Core Brand Colour
+
+The primary LiVEiT® brand colour is Aqua.
+
+| Colour | Hex       |
+| ------ | --------- |
+| Aqua   | `#7EBECD` |
+
+This colour represents the LiVEiT® Framework and should be used for primary branding, highlights and official visual identity wherever appropriate.
+
+---
+
+# Official Framework Colours
+
+The LiVEiT® Framework uses twelve official colours to represent the twelve core areas of the framework.
+
+| Circle | Purpose                               | Colour           |
+| ------ | ------------------------------------- | ---------------- |
+| 1      | Anxiety                               | Blue             |
+| 2      | Inflammation & Diet                   | Orange           |
+| 3      | Cannabinoids & Endocannabinoid System | Green            |
+| 4      | Pain                                  | Brown            |
+| 5      | Palliative Care                       | Grey             |
+| 6      | Consultation                          | White            |
+| 7      | Mental Health                         | Red              |
+| 8      | PTSD                                  | Black            |
+| 9      | Creativity                            | Yellow           |
+| 10     | Self Harm                             | Violet           |
+| 11     | Charities & Community                 | Rose             |
+| 12     | LiVEiT® Framework                     | Aqua (`#7EBECD`) |
+
+These colours form the visual language of the LiVEiT® ecosystem and should remain consistent across all official implementations.
+
+---
+
+# Neutral Palette
+
+Neutral colours provide balance and improve readability.
+
+Recommended neutrals include:
+
+| Colour     | Typical Use                                  |
+| ---------- | -------------------------------------------- |
+| White      | Backgrounds, text and icons on dark surfaces |
+| Black      | Text, icons and light backgrounds            |
+| Dark Grey  | Primary application background               |
+| Light Grey | Dividers, borders and secondary elements     |
+
+Neutral colours should support the interface without competing with the primary brand colours.
+
+---
+
+# Colour Consistency
+
+Official colours should remain visually consistent across all platforms.
+
+Avoid unnecessary variation between:
+
+* Websites
+* Mobile applications
+* Desktop software
+* Documentation
+* Presentations
+* Printed material
+
+Where colour profiles differ between digital and print media, use the closest possible match.
+
+---
+
+# Colour Usage
+
+The LiVEiT® palette should be used with restraint.
+
+Primary colours should guide attention rather than dominate the interface.
+
+Good practice includes:
+
+* Using colour to communicate structure.
+* Maintaining strong contrast between foreground and background.
+* Using neutral colours to provide visual balance.
+* Applying accent colours consistently.
+
+---
+
+# Accessibility
+
+Colour should never be the only method used to communicate information.
+
+Interfaces should also use:
+
+* Labels
+* Icons
+* Typography
+* Layout
+* Visual hierarchy
+
+Text should maintain sufficient contrast against its background to support readability.
+
+---
+
+# Gradients
+
+Gradients may be used where they are part of the official LiVEiT® design language.
+
+They should remain subtle and should not reduce readability or recognition of the brand.
+
+Custom gradients should not replace official brand colours.
+
+---
+
+# Transparency
+
+Transparency effects, including glass-style interfaces, may be used where they support the overall user experience.
+
+Effects should remain subtle and should never reduce accessibility or legibility.
+
+---
+
+# Colour Accuracy
+
+Official brand colours should not be altered.
+
+Avoid:
+
+* Arbitrary hue changes
+* Excessive saturation
+* Unapproved tints
+* Unapproved gradients
+* Colour substitutions
+
+Consistency strengthens recognition of the LiVEiT® brand.
+
+---
+
+# Future Expansion
+
+Additional colours may be introduced for new products or services where appropriate.
+
+New colours should complement the existing palette while preserving the recognisable identity of the LiVEiT® Framework.
+
+---
+
+# Registered Trademark
+
+The LiVEiT® colour palette forms part of the overall visual identity of the framework.
+
+While individual colours cannot themselves be protected, their consistent application contributes to the recognition of the LiVEiT® brand and should be used in accordance with this Branding Guide.
