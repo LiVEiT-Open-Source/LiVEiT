@@ -1,0 +1,184 @@
+# LiVEiT® Accessibility Guidance
+
+Accessibility is a fundamental principle of the LiVEiT® Framework.
+
+Every user should be able to access, understand and interact with LiVEiT® products regardless of ability, technology or environment.
+
+Accessibility should be considered throughout the design and development process rather than added as a final step.
+
+---
+
+# Design Principles
+
+Accessible design within the LiVEiT® Framework is based upon five principles:
+
+* Clarity
+* Simplicity
+* Consistency
+* Inclusivity
+* Usability
+
+These principles support a better experience for all users.
+
+---
+
+# Colour and Contrast
+
+Text and interface elements should provide sufficient contrast against their backgrounds.
+
+Recommended practice includes:
+
+* Dark text on light backgrounds.
+* Light text on dark backgrounds.
+* High contrast for important controls.
+* Avoiding low-contrast colour combinations.
+
+Colour should enhance communication rather than reduce readability.
+
+---
+
+# Typography
+
+Typography should remain clear and easy to read.
+
+Recommended practice:
+
+* Use legible fonts.
+* Maintain appropriate font sizes.
+* Provide adequate line spacing.
+* Avoid decorative fonts for body text.
+* Preserve clear visual hierarchy.
+
+Readable typography improves accessibility for every user.
+
+---
+
+# Keyboard Navigation
+
+Interactive components should be fully operable using a keyboard where appropriate.
+
+Users should be able to:
+
+* Navigate between controls.
+* Activate buttons and links.
+* Access menus.
+* Close modal windows.
+* Move through forms logically.
+
+Visible keyboard focus indicators should always be provided.
+
+---
+
+# Screen Readers
+
+Applications should provide meaningful information to assistive technologies.
+
+Where appropriate:
+
+* Use semantic HTML.
+* Provide descriptive labels.
+* Include alternative text for informative images.
+* Label form controls correctly.
+* Use appropriate heading structures.
+
+Content should remain understandable without relying solely on visual presentation.
+
+---
+
+# Icons
+
+Icons should support communication but should not replace descriptive text where understanding may be affected.
+
+Where appropriate:
+
+* Pair icons with labels.
+* Provide accessible names.
+* Avoid relying solely on colour or icon shape to communicate meaning.
+
+---
+
+# Images
+
+Images should include descriptive alternative text whenever they convey meaningful information.
+
+Decorative images should be ignored by assistive technologies where supported.
+
+Important information should never exist only within an image.
+
+---
+
+# Motion and Animation
+
+Animations should enhance usability without creating unnecessary distraction.
+
+Where possible:
+
+* Respect reduced motion preferences.
+* Avoid excessive flashing.
+* Keep transitions smooth and purposeful.
+* Allow users to complete interactions without time pressure.
+
+Motion should support understanding rather than entertainment.
+
+---
+
+# Responsive Design
+
+Accessible interfaces should function consistently across:
+
+* Desktop computers
+* Laptops
+* Tablets
+* Mobile devices
+* High-resolution displays
+
+Layouts should adapt without reducing usability or readability.
+
+---
+
+# Forms
+
+Forms should be easy to complete.
+
+Recommended practice includes:
+
+* Clear labels.
+* Helpful instructions.
+* Logical field order.
+* Meaningful validation messages.
+* Accessible error handling.
+
+Users should always understand what information is required.
+
+---
+
+# Documentation
+
+Documentation should be written using clear, concise language.
+
+Where appropriate:
+
+* Use headings to organise content.
+* Present information logically.
+* Keep paragraphs focused.
+* Use lists and tables to improve readability.
+
+Well-structured documentation benefits all users.
+
+---
+
+# Standards
+
+The LiVEiT® Framework aims to support recognised accessibility best practices and encourages developers to design applications that are usable by the widest possible audience.
+
+Projects built using LiVEiT® should consider applicable accessibility standards relevant to their intended platform and audience.
+
+---
+
+# Best Practice
+
+Accessibility is an ongoing responsibility rather than a one-time task.
+
+Every design decision should consider whether it improves clarity, usability and inclusion.
+
+By placing accessibility at the centre of development, the LiVEiT® Framework aims to create technology that is easier for everyone to understand and use.
