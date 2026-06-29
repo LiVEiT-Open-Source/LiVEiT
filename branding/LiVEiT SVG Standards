@@ -1,0 +1,164 @@
+# LiVEiT® SVG Standards
+
+Scalable Vector Graphics (SVG) are the preferred format for official LiVEiT® logos, icons and graphical assets.
+
+SVG files provide resolution-independent graphics that remain sharp across all screen sizes and display densities while maintaining small file sizes.
+
+This document defines the standards for creating and using SVG assets within the LiVEiT® Framework.
+
+---
+
+# Why SVG
+
+SVG is the preferred graphic format because it offers:
+
+* Infinite scalability
+* Small file sizes
+* Crisp rendering on high-resolution displays
+* Transparency support
+* Easy integration with websites and applications
+* Excellent browser compatibility
+
+Whenever practical, SVG should be used instead of raster image formats.
+
+---
+
+# Official Assets
+
+Only official SVG files supplied by the LiVEiT® project should be used for branding.
+
+Official assets must not be:
+
+* Redrawn
+* Recreated
+* Modified
+* Simplified
+* Traced from screenshots
+
+If a required variation does not exist, request a new official asset rather than creating one manually.
+
+---
+
+# ViewBox
+
+Every SVG should include a correctly defined `viewBox`.
+
+Using a `viewBox` ensures that graphics scale correctly without distortion.
+
+Width and height values should remain proportional to the original artwork.
+
+---
+
+# Responsive Scaling
+
+SVG graphics should scale naturally within responsive layouts.
+
+Avoid fixed dimensions where responsive behaviour is required.
+
+Use CSS or application layout controls to determine displayed size while preserving the original aspect ratio.
+
+---
+
+# Optimisation
+
+SVG files should be optimised before publication.
+
+Optimisation should:
+
+* Remove unnecessary metadata.
+* Eliminate unused elements.
+* Preserve visual accuracy.
+* Maintain accessibility where applicable.
+
+Optimisation must never alter the appearance of the artwork.
+
+---
+
+# Accessibility
+
+Decorative SVG graphics should be hidden from assistive technologies where appropriate.
+
+Meaningful graphics should include descriptive titles or alternative text when supported by the platform.
+
+Logos used as navigation elements should always provide an accessible label.
+
+---
+
+# Colour Integrity
+
+Official SVG assets must retain the approved LiVEiT® colour palette.
+
+Do not:
+
+* Replace colours.
+* Add gradients that are not part of the official artwork.
+* Change opacity.
+* Apply filters.
+* Add shadows or glow effects.
+
+Consistency is essential for maintaining brand recognition.
+
+---
+
+# Naming Convention
+
+SVG files should use clear, descriptive filenames.
+
+Examples:
+
+```text
+liveit-logo-primary.svg
+liveit-logo-white.svg
+liveit-logo-black.svg
+liveit-icon.svg
+liveit-circle-aqua.svg
+```
+
+Use lowercase letters and hyphens for readability and consistency.
+
+---
+
+# File Structure
+
+Official SVG assets should remain organised within the repository.
+
+Example structure:
+
+```text
+branding/
+└── assets/
+    └── svg/
+        ├── liveit-logo-primary.svg
+        ├── liveit-logo-white.svg
+        ├── liveit-logo-black.svg
+        ├── liveit-icon.svg
+        └── liveit-circle-aqua.svg
+```
+
+A consistent structure simplifies maintenance and version control.
+
+---
+
+# Version Control
+
+SVG assets should be updated only when an official design revision has been approved.
+
+When replacing an asset:
+
+* Preserve the filename whenever possible.
+* Document significant visual changes.
+* Ensure compatibility with existing documentation and applications.
+
+---
+
+# Best Practice
+
+When using SVG assets:
+
+* Preserve the original proportions.
+* Use official files only.
+* Scale proportionally.
+* Maintain transparency.
+* Test rendering across multiple browsers and devices.
+
+Following these standards ensures that the LiVEiT® visual identity remains consistent across all digital platforms.
