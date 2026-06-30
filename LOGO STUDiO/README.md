@@ -2,7 +2,7 @@
 
 The LiVEiT® Logo Studio is the official standalone branding utility for the LiVEiT® Framework.
 
-It has been designed to generate consistent, high-quality branding assets directly from the official LiVEiT® logo without requiring external graphics software.
+It has been designed to generate consistent, high quality branding assets directly from the official LiVEiT® logo without requiring external graphics software.
 
 Unlike traditional design workflows, the Logo Studio works entirely within a single HTML file and has **no external dependencies**.
 
@@ -34,7 +34,7 @@ Current features include:
 - No external CSS
 - No JavaScript libraries
 - No assets folder
-- SVG-based rendering
+- SVG based rendering
 - Individual circle controls
 - Show / hide circles
 - Background colour selector
@@ -44,8 +44,8 @@ Current features include:
 - JPEG export
 - Apple App Icon export presets
 - Multiple export resolutions
-- High-resolution output
-- Glass-style control interface
+- High resolution output
+- Glass style control interface
 
 ---
 
@@ -53,7 +53,7 @@ Current features include:
 
 1. Open **logo_studio.html** in any modern web browser.
 
-2. Configure the logo using the built-in controls.
+2. Configure the logo using the built in controls.
 
 3. Select the required export format.
 
