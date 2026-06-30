@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiVEiT®</title>
+  <link rel="stylesheet" href="assets/hover_styles01.css">
+  <style>
+    :root {
+      --modal-font-family: 'Arial', sans-serif;
+    }
+
+    body {
+  font-family: var(--modal-font-family);
+
+  background-color: #2e2e2e;
+
+  background-image: url("");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+   h1,
+p {
+  text-align: left;
+  color: #2e2e2e !important;
+}
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    .modal-content {
+      background-color: #2e2e2e;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid grey;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 500px;
+      color: #818181;
+      text-align: left;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #ffffff;
+    }
+
+    a {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #dfdfdf;  /* button color */
+      color: #333333; /* make text visible on button */
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9em;
+      transition: background-color 1.5s;
+    }
+
+    a:hover {
+      background-color: #ffffff;
+    }
+
+    .back-button-wrap {
+      display: none !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px auto 50px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .back-button-wrap a {
+      background-color: transparent;
+      padding: 0;
+      border-radius: 999px;
+      transition: none;
+    }
+
+    .back-button-wrap a:hover {
+      background-color: transparent;
+    }
+
+    /* SMOKED GLASS BUTTON */
+
+.aqua-btn {
+  position: relative;
+  width: 110px;
+  height: 34px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  overflow: visible;
+  outline: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(110,110,110,0.45) 0%,
+      rgba(45,45,45,0.35) 100%
+    );
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.20),
+    0 4px 8px rgba(0,0,0,0.20);
+
+  transform: scale(1);
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.18s ease;
+}
+
+.aqua-btn::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  top: 4px;
+  height: 14px;
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.28) 0%,
+      rgba(255,255,255,0.10) 100%
+    );
+
+  pointer-events: none;
+}
+
+.aqua-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,0.08) 0%,
+      rgba(255,255,255,0) 70%
+    );
+
+  pointer-events: none;
+}
+
+.aqua-btn span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  color: rgba(255,255,255,0.92);
+
+  z-index: 5;
+}
+
+.aqua-btn span::before {
+  content: attr(data-text);
+  position: absolute;
+  color: rgba(0,0,0,0.45);
+  filter: blur(4px);
+  transform: translateY(4px);
+  z-index: -1;
+}
+
+.aqua-btn .glow-1,
+.aqua-btn .glow-2,
+.aqua-btn .shine {
+  display: none;
+}
+
+.aqua-btn .outer-glow {
+  position: absolute;
+  left: -16px;
+  right: -16px;
+  top: -6px;
+  bottom: -14px;
+
+  border-radius: 999px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(0,0,0,0.18) 0%,
+      rgba(0,0,0,0.08) 45%,
+      rgba(0,0,0,0) 75%
+    );
+
+  filter: blur(12px);
+  transform: translateY(6px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.aqua-btn:hover {
+  transform: scale(1.03);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.25),
+    0 4px 10px rgba(0,0,0,0.18);
+}
+
+.aqua-btn:hover {
+  transform: scale(1.03);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.25),
+    0 3px 8px rgba(0,0,0,0.15);
+}
+
+.aqua-btn:hover .outer-glow {
+  opacity: 0.35;
+}
+
+.aqua-btn:active {
+  transform: scale(0.97);
+}
+  
+.logo-controls{
+max-width:420px;
+margin:20px auto 40px;
+padding:16px;
+background:linear-gradient(to bottom,rgba(110,110,110,.35),rgba(45,45,45,.25));
+border:1px solid rgba(255,255,255,.15);
+border-radius:18px;
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+justify-content:center;
+}
+.logo-controls button{
+min-width:48px;
+font-weight:600;
+background:linear-gradient(to bottom,#666,#3b3b3b);
+border:1px solid rgba(255,255,255,.18);
+box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 3px 8px rgba(0,0,0,.25);
+transition:all .15s ease;
+
+background:#444;
+color:#fff;
+border:1px solid #666;
+border-radius:999px;
+padding:8px 12px;
+cursor:pointer;
+}
+
+
+.logo-bg-controls{
+max-width:420px;
+margin:0 auto 30px;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+justify-content:center;
+align-items:center;
+color:#fff;
+font-family:Arial,sans-serif;
+}
+
+
+.logo-bg-controls,.logo-controls{
+background:linear-gradient(to bottom,rgba(85,85,85,.45),rgba(35,35,35,.28));
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.18);
+border-radius:22px;
+padding:18px;
+box-shadow:0 8px 22px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.18);
+}
+.logo-bg-controls input[type=color]{
+width:48px;height:36px;border:none;background:none;cursor:pointer;
+}
+.logo-bg-controls input[type=text]{
+width:95px;background:#222;color:#fff;border:1px solid #666;
+border-radius:8px;padding:6px 8px;
+}
+
+
+.logo-controls button:hover{
+transform:translateY(-1px);
+background:linear-gradient(to bottom,#7b7b7b,#4b4b4b);
+}
+.logo-controls button:active{
+transform:scale(.97);
+}
+
+
+.export-row{
+display:grid;
+grid-template-columns:120px 110px 230px 130px 130px;
+gap:10px;
+align-items:center;
+margin-top:14px;
+}
+.export-row strong{color:#fff}
+.export-row select,
+.export-row button{
+background:#222;
+color:#fff;
+border:1px solid #666;
+border-radius:8px;
+padding:7px 10px;
+font-size:14px;
+}
+.export-row button{
+cursor:pointer;
+font-weight:600;
+background:linear-gradient(to bottom,#666,#444);
+border-radius:999px;
+}
+
+
+.export-row button{
+position:relative;
+overflow:hidden;
+background:linear-gradient(to bottom,rgba(110,110,110,.45),rgba(45,45,45,.35)) !important;
+border:1px solid rgba(255,255,255,.18) !important;
+border-radius:999px !important;
+box-shadow:
+inset 0 1px 0 rgba(255,255,255,.20),
+0 4px 8px rgba(0,0,0,.20);
+transition:transform .12s ease, box-shadow .18s ease;
+}
+.export-row button::before{
+content:"";
+position:absolute;
+left:8px;
+right:8px;
+top:4px;
+height:14px;
+border-radius:999px;
+background:linear-gradient(to bottom,rgba(255,255,255,.28),rgba(255,255,255,.08));
+pointer-events:none;
+}
+.export-row button:hover{
+transform:scale(1.03);
+box-shadow:
+inset 0 1px 0 rgba(255,255,255,.25),
+0 4px 10px rgba(0,0,0,.18);
+}
+.export-row button:active{
+transform:scale(.97);
+}
+
+</style>
+</head>
+<body>
+  <div style="margin-top: 50px;">
+    <h1><center>gr<span style="color: #2e2e2e;">0</span>wheal<span style="color: #2e2e2e;">thc</span>are©</center></h1>
+
+    <p style="color: #2e2e2e; text-align: center;">
+        LiVEiT® PREMiUM licence: #003
+    </p>
+</div>
+</p>
+
+    <div style="display: flex; justify-content: center; overflow: hidden;">
+      
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 400px;">
+  <defs>
+    <filter id="glassShadow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="7" stdDeviation="5" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+
+    <filter id="innerDepth" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.4" flood-color="#ffffff" flood-opacity="0.25"/>
+      <feDropShadow dx="0" dy="-3" stdDeviation="2" flood-color="#000000" flood-opacity="0.38"/>
+    </filter>
+
+    <radialGradient id="circle01Fill" cx="32%" cy="24%" r="78%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="18%" stop-color="#8f9aff"/>
+      <stop offset="58%" stop-color="#5A6DFC"/>
+      <stop offset="100%" stop-color="#1b246f"/>
+    </radialGradient>
+
+    <radialGradient id="circle02Fill" cx="32%" cy="24%" r="78%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="18%" stop-color="#ffd38b"/>
+      <stop offset="58%" stop-color="#FFA628"/>
+      <stop offset="100%" stop-color="#7a4300"/>
+    </radialGradient>
+
+    <radialGradient id="circle03Fill" cx="32%" cy="24%" r="78%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="18%" stop-color="#85d996"/>
+      <stop offset="58%" stop-color="#3FA144"/>
+      <stop offset="100%" stop-color="#0f3d20"/>
+    </radialGradient>
+
+    <radialGradient id="circle04Fill" cx="32%" cy="24%" r="78%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="18%" stop-color="#d88b4e"/>
+      <stop offset="58%" stop-color="#B34d00"/>
+      <stop offset="100%" stop-color="#4a1d00"/>
+    </radialGradient>
+
+    <radialGradient id="circle05Fill" cx="32%" cy="24%" r="78%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="18%" stop-color="#cfcfcf"/>
+      <stop offset="58%" stop-color="#818181"/>
+      <stop offset="100%" stop-color="#2f2f2f"/>
+    </radialGradient>
+
+    <radialGradient id="circle06Fill" cx="32%" cy="24%" r="78%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="28%" stop-color="#ffffff"/>
+      <stop offset="68%" stop-color="#d8d8d8"/>
+      <stop offset="100%" stop-color="#6f6f6f"/>
+    </radialGradient>
+
+    <radialGradient id="circle07Fill" cx="32%" cy="24%" r="78%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="18%" stop-color="#ff8a86"/>
+      <stop offset="58%" stop-color="#F03935"/>
+      <stop offset="100%" stop-color="#711010"/>
+    </radialGradient>
+
+    <radialGradient id="circle08Fill" cx="32%" cy="24%" r="78%">
+      <stop offset="0%" stop-color="#777777"/>
+      <stop offset="22%" stop-color="#2f2f2f"/>
+      <stop offset="62%" stop-color="#000000"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+
+    <radialGradient id="circle09Fill" cx="32%" cy="24%" r="78%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="18%" stop-color="#f3f78f"/>
+      <stop offset="58%" stop-color="#D7DC57"/>
+      <stop offset="100%" stop-color="#696d18"/>
+    </radialGradient>
+
+    <radialGradient id="circle10Fill" cx="32%" cy="24%" r="78%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="18%" stop-color="#d26bff"/>
+      <stop offset="58%" stop-color="#9a2bd4"/>
+      <stop offset="100%" stop-color="#4b116d"/>
+    </radialGradient>
+
+    <radialGradient id="circle11Fill" cx="32%" cy="24%" r="78%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="18%" stop-color="#ffa3ed"/>
+      <stop offset="58%" stop-color="#d95fc9"/>
+      <stop offset="100%" stop-color="#66265f"/>
+    </radialGradient>
+
+    <radialGradient id="circle12Fill" cx="32%" cy="24%" r="78%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="18%" stop-color="#b9f2f5"/>
+      <stop offset="58%" stop-color="#7ebecd"/>
+      <stop offset="100%" stop-color="#285761"/>
+    </radialGradient>
+
+    <linearGradient id="glassHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.78"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <g>
+    <circle class="click-circle" cx="200" cy="40" r="25" fill="url(#circle12Fill)" id="circle12" stroke="#7ebecd" stroke-width="1.5"></circle>
+    <circle cx="190" cy="30" r="10" fill="url(#glassHighlight)" opacity="0.85"></circle>
+
+    <circle class="click-circle" cx="280" cy="61" r="25" fill="url(#circle01Fill)" id="circle01" stroke="#5A6DFC" stroke-width="1.5"></circle>
+    <circle cx="270" cy="51" r="10" fill="url(#glassHighlight)" opacity="0.85"></circle>
+
+    <circle class="click-circle" cx="338" cy="120" r="25" fill="url(#circle02Fill)" id="circle02" stroke="#FFA628" stroke-width="1.5"></circle>
+    <circle cx="328" cy="110" r="10" fill="url(#glassHighlight)" opacity="0.85"></circle>
+
+    <circle class="click-circle" cx="360" cy="200" r="25" fill="url(#circle03Fill)" id="circle03" stroke="#3FA144" stroke-width="1.5"></circle>
+    <circle cx="350" cy="190" r="10" fill="url(#glassHighlight)" opacity="0.85"></circle>
+
+    <circle class="click-circle" cx="338" cy="280" r="25" fill="url(#circle04Fill)" id="circle04" stroke="#B34d00" stroke-width="1.5"></circle>
+    <circle cx="328" cy="270" r="10" fill="url(#glassHighlight)" opacity="0.85"></circle>
+
+    <circle class="click-circle" cx="280" cy="338" r="25" fill="url(#circle05Fill)" id="circle05" stroke="#818181" stroke-width="1.5"></circle>
+    <circle cx="270" cy="328" r="10" fill="url(#glassHighlight)" opacity="0.85"></circle>
+
+    <circle class="click-circle" cx="200" cy="360" r="25" fill="url(#circle06Fill)" id="circle06" stroke="#ffffff" stroke-width="1.5"></circle>
+    <circle cx="190" cy="350" r="10" fill="url(#glassHighlight)" opacity="0.85"></circle>
+
+    <circle class="click-circle" cx="120" cy="338" r="25" fill="url(#circle07Fill)" id="circle07" stroke="#F03935" stroke-width="1.5"></circle>
+    <circle cx="110" cy="328" r="10" fill="url(#glassHighlight)" opacity="0.85"></circle>
+
+    <circle class="click-circle" cx="61" cy="280" r="25" fill="url(#circle08Fill)" id="circle08" stroke="#000000" stroke-width="1.5"></circle>
+    <circle cx="51" cy="270" r="10" fill="url(#glassHighlight)" opacity="0.55"></circle>
+
+    <circle class="click-circle" cx="40" cy="200" r="25" fill="url(#circle09Fill)" id="circle09" stroke="#D7DC57" stroke-width="1.5"></circle>
+    <circle cx="30" cy="190" r="10" fill="url(#glassHighlight)" opacity="0.85"></circle>
+
+    <circle class="click-circle" cx="61" cy="120" r="25" fill="url(#circle10Fill)" id="circle10" stroke="#9a2bd4" stroke-width="1.5"></circle>
+    <circle cx="51" cy="110" r="10" fill="url(#glassHighlight)" opacity="0.85"></circle>
+
+    <circle class="click-circle" cx="120" cy="61" r="25" fill="url(#circle11Fill)" id="circle11" stroke="#d95fc9" stroke-width="1.5"></circle>
+    <circle cx="110" cy="51" r="10" fill="url(#glassHighlight)" opacity="0.85"></circle>
+  </g>
+
+  <image x="125" y="125" width="150" height="150" href="" />
+</svg>
+
+    </div>
+
+    <div class="back-button-wrap">
+      <!-- CLIENT EDIT AREA: BACK BUTTON URL START -->
+      <a href="https://gr0w.info" target="_self">
+      <!-- CLIENT EDIT AREA: BACK BUTTON URL END -->
+        <button class="aqua-btn">
+          <div class="outer-glow"></div>
+          <div class="glow-1"></div>
+          <div class="glow-2"></div>
+          <div class="shine"></div>
+          <!-- CLIENT EDIT AREA: BACK BUTTON TEXT START -->
+          <span data-text="BACK">BACK</span>
+          <!-- CLIENT EDIT AREA: BACK BUTTON TEXT END -->
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Keep only ONE modal with a unique ID -->
+  <div class="modal" id="circle-modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-header">Default Header</h2>
+      <p id="modal-text">Default text content goes here.</p>
+      <a href="#" id="modal-link" target="_blank">CLiCK HERE</a>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('circle-modal');
+    const circles = document.querySelectorAll('circle');
+    const modalHeader = document.getElementById('modal-header');
+    const modalText = document.getElementById('modal-text');
+    const modalLink = document.getElementById('modal-link');
+    const closeModal = document.querySelector('.close');
+
+    const circleData = {
+      <!-- CLIENT EDIT AREA: CIRCLE 01 MODAL CONTENT START -->
+      circle01: {
+        header: "#01 BLUE : Understanding Anxiety", // EDITABLE: modal heading text
+        text: "Blue is a guided course for managing anxiety using a unique fibre optic brain network analogy, practical mindfulness tools and insights into how cannabinoids may help regulate emotional health", // EDITABLE: modal paragraph text
+        link: "https://gr0whealthcare.com/courses/liveit-blue-understanding-and-managing-anxiety/", // EDITABLE: button link URL
+        image: "images/circle01.4.jpg" // EDITABLE: modal background image path
+      },
+      <!-- CLIENT EDIT AREA: CIRCLE 01 MODAL CONTENT END -->
+
+      <!-- CLIENT EDIT AREA: CIRCLE 02 MODAL CONTENT START -->
+      circle02: {
+        header: "#02 ORANGE: Understanding Inflammation & Nutrition", // EDITABLE: modal heading text
+        text: "This short course blends science, mindfulness, and the LiVEiT® photo diary method to guide lasting change", // EDITABLE: modal paragraph text
+        link: "https://gr0whealthcare.com/courses/02-orange-understanding-inflammation-rebuilding-through-nutrition/", // EDITABLE: button link URL
+        image: "images/circle02.4.jpg" // EDITABLE: modal background image path
+      },
+      <!-- CLIENT EDIT AREA: CIRCLE 02 MODAL CONTENT END -->
+
+      <!-- CLIENT EDIT AREA: CIRCLE 03 MODAL CONTENT START -->
+      circle03: {
+        header: "#03 GREEN: Nature, Movement & Cannabinoids", // EDITABLE: modal heading text
+        text: "Whether you’re managing burnout, chronic pain, or simply seeking natural healing, this course will guide you step by step through practical tools and techniques to support your ECS naturally", // EDITABLE: modal paragraph text
+        link: "https://gr0whealthcare.com/courses/03-green-rebuilding-with-nature-movement-cannabinoids/", // EDITABLE: button link URL
+        image: "images/circle03.4.jpg" // EDITABLE: modal background image path
+      },
+      <!-- CLIENT EDIT AREA: CIRCLE 03 MODAL CONTENT END -->
+
+      <!-- CLIENT EDIT AREA: CIRCLE 04 MODAL CONTENT START -->
+      circle04: {
+        header: "#04 BROWN: Pain Management", // EDITABLE: modal heading text
+        text: "Time and time again, our clients say that Fourfive products have proved to be very effective in the reduction of pain", // EDITABLE: modal paragraph text
+        link: "https://gr0whealthcare.com/courses/04-pain-management/", // EDITABLE: button link URL
+        image: "images/circle04.4.jpg" // EDITABLE: modal background image path
+      },
+      <!-- CLIENT EDIT AREA: CIRCLE 04 MODAL CONTENT END -->
+
+      <!-- CLIENT EDIT AREA: CIRCLE 05 MODAL CONTENT START -->
+      circle05: {
+        header: "T05 GREY: Tech Support for Medical Cannabis referrals (UK)", // EDITABLE: modal heading text
+        text: "Navigating the process of applying for a legal medical cannabis prescription in the UK can feel overwhelming, but you don’t have to do it alone. Our FREE tech support service provides guidance and digital assistance to ensure the process is smooth and stress free", // EDITABLE: modal paragraph text
+        link: "https://gr0whealthcare.com/courses/05-referrals/", // EDITABLE: button link URL
+        image: "images/circle05.4.jpg" // EDITABLE: modal background image path
+      },
+      <!-- CLIENT EDIT AREA: CIRCLE 05 MODAL CONTENT END -->
+
+      <!-- CLIENT EDIT AREA: CIRCLE 06 MODAL CONTENT START -->
+      circle06: {
+        header: "T06 WHITE: LiVEiT® PRO LiCENCE (YEARLY)", // EDITABLE: modal heading text
+        text: "Better health begins with acceptance, grows through new angles of understanding, shifts with a change in perception, and is strengthened through education. Become a certified LiVEiT® PRO coach with access to one to one support. Find out more click the link below", // EDITABLE: modal paragraph text
+        link: "https://gr0whealthcare.com/courses/06-white-balance-liveit-coaching/", // EDITABLE: button link URL
+        image: "images/circle06.4.jpg" // EDITABLE: modal background image path
+      },
+      <!-- CLIENT EDIT AREA: CIRCLE 06 MODAL CONTENT END -->
+
+      <!-- CLIENT EDIT AREA: CIRCLE 07 MODAL CONTENT START -->
+      circle07: {
+        header: "T07 RED: meNTAL HEALTH", // EDITABLE: modal heading text
+        text: "Here, we can guide you through a life changing journey of self discovery using the Myers Briggs Type Indicator (MBTI) personality quiz.", // EDITABLE: modal paragraph text
+        link: "https://gr0whealthcare.com/courses/t07/", // EDITABLE: button link URL
+        image: "images/circle07.4.jpg" // EDITABLE: modal background image path
+      },
+      <!-- CLIENT EDIT AREA: CIRCLE 07 MODAL CONTENT END -->
+
+      <!-- CLIENT EDIT AREA: CIRCLE 08 MODAL CONTENT START -->
+      circle08: {
+        header: "T08 BLACK: TiMELiNE", // EDITABLE: modal heading text
+        text: "T08 TiMELiNE gives you a strong foundation to move forward, not by forgetting your story, but by finally owning it", // EDITABLE: modal paragraph text
+        link: "https://gr0whealthcare.com/courses/2020/", // EDITABLE: button link URL
+        image: "images/circle08.4.jpg" // EDITABLE: modal background image path
+      },
+      <!-- CLIENT EDIT AREA: CIRCLE 08 MODAL CONTENT END -->
+
+      <!-- CLIENT EDIT AREA: CIRCLE 09 MODAL CONTENT START -->
+      circle09: {
+        header: "WEAR THE STORY, SUPPORT THE MiSSiON", // EDITABLE: modal heading text
+        text: `From rehearsal rooms and the rooftops live lounge sessions to today's community wellbeing projects, the jam shop rehearsal studios® remains part of our story.
+
+Our branded merchandise helps fund the ongoing work of gr0w© and gr0whealthcare©, supporting mental health, technology assistance and community wellbeing initiatives across Pembrokeshire.
+
+When you wear our brand, you're not simply buying merchandise. You're helping us invest back into people, projects and the community.
+
+Every purchase helps us turn creativity into community support.`, // EDITABLE: modal paragraph text
+        link: "https://www.thejamshoprehearsalstudios.com", // EDITABLE: button link URL
+        image: "images/merch.jpg" // EDITABLE: modal background image path
+      },
+      <!-- CLIENT EDIT AREA: CIRCLE 09 MODAL CONTENT END -->
+
+      <!-- CLIENT EDIT AREA: CIRCLE 10 MODAL CONTENT START -->
+      circle10: {
+        header: "T10 ViOLET: SELF HARM", // EDITABLE: modal heading text
+        text: "The Spur of the Moment - HARDBACK", // EDITABLE: modal paragraph text
+        link: "https://amzn.to/4hoGpFY", // EDITABLE: button link URL
+        image: "images/circle10.4.jpg" // EDITABLE: modal background image path
+      },
+      <!-- CLIENT EDIT AREA: CIRCLE 10 MODAL CONTENT END -->
+
+      <!-- CLIENT EDIT AREA: CIRCLE 11 MODAL CONTENT START -->
+      circle11: {
+        header: "T11 ROSE: CHARiTiES and PROJECTS", // EDITABLE: modal heading text
+        text: "We connect those in need with the resources and support they require to address specific challenges. Craig King gr0w©2019", // EDITABLE: modal paragraph text
+        link: "https://calendly.com/gr0whealthcare/new-meeting", // EDITABLE: button link URL
+        image: "images/circle11.4.jpg" // EDITABLE: modal background image path
+      },
+      <!-- CLIENT EDIT AREA: CIRCLE 11 MODAL CONTENT END -->
+
+      <!-- CLIENT EDIT AREA: CIRCLE 12 MODAL CONTENT START -->
+      circle12: {
+        header: "T12 AQUA: gr0whealthcare© Courses", // EDITABLE: modal heading text
+        text: "Our mission is to empower individuals to take control of their health and well being by providing access to comprehensive, personalised care that focuses on prevention and intervention", // EDITABLE: modal paragraph text
+        link: "https://gr0whealthcare.com/courses", // EDITABLE: button link URL
+        image: "images/circle12.4.jpg" // EDITABLE: modal background image path
+      }
+      <!-- CLIENT EDIT AREA: CIRCLE 12 MODAL CONTENT END -->
+    };
+
+    circles.forEach(circle => {
+      circle.addEventListener('click', () => {
+        const data = circleData[circle.id];
+        if (data) {
+          const strokeColor = getComputedStyle(circle).stroke;
+          modalHeader.textContent = data.header;
+          modalText.textContent = data.text;
+          modalLink.href = data.link;
+          modalLink.style.backgroundColor = strokeColor;
+          modalHeader.style.color = strokeColor;
+          document.querySelector('.modal-content').style.backgroundImage = `url(${data.image})`;
+          modal.style.display = 'block';
+        } else {
+          console.error(`No data for circle ID: ${circle.id}`);
+        }
+      });
+    });
+
+    closeModal.addEventListener('click', () => modal.style.display = 'none');
+    window.addEventListener('click', event => {
+      if (event.target === modal) modal.style.display = 'none';
+    });
+  
+function setHiddenTextColour(col){
+ document.querySelectorAll('h1, p, h1 span').forEach(e=>e.style.color=col);
+}
+const bgPicker=document.getElementById('bgPicker');
+const bgHex=document.getElementById('bgHex');
+bgPicker.oninput=e=>{bgHex.value=e.target.value;document.body.style.backgroundImage='none';document.body.style.backgroundColor=e.target.value;};
+bgHex.onchange=e=>{bgPicker.value=e.target.value;document.body.style.backgroundImage='none';document.body.style.backgroundColor=e.target.value;};
+
+const textPicker=document.getElementById('textPicker');
+const textHex=document.getElementById('textHex');
+textPicker.oninput=e=>{textHex.value=e.target.value;setHiddenTextColour(e.target.value);};
+textHex.onchange=e=>{textPicker.value=e.target.value;setHiddenTextColour(e.target.value);};
+
+</script>
+
+
+
+<div style="height:140px;"></div>
+
+
+<style>
+.logo-panel{
+max-width:760px;
+margin:140px auto 40px;
+padding:16px 18px;
+background:linear-gradient(to bottom,rgba(85,85,85,.42),rgba(35,35,35,.30));
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.18);
+border-radius:20px;
+box-shadow:0 8px 22px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.16);
+}
+.panel-row{display:grid;grid-template-columns:120px 42px 110px 1fr;gap:10px;align-items:center;margin-bottom:12px}
+.panel-row strong{color:#fff}
+.panel-row input[type=text]{background:#222;color:#fff;border:1px solid #666;border-radius:8px;padding:6px 8px}
+.panel-buttons{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+</style>
+
+<div class="logo-panel">
+<div class="panel-row">
+<strong>Background</strong>
+<input type="color" id="bgPicker" value="#2e2e2e">
+<input type="text" id="bgHex" value="#2e2e2e">
+<input type="file" id="bgImage" accept="image/*">
+</div>
+<div class="panel-row">
+<strong>Hidden Text</strong>
+<input type="color" id="textPicker" value="#2e2e2e">
+<input type="text" id="textHex" value="#2e2e2e">
+<div></div>
+</div>
+<div class="panel-buttons">
+
+<button onclick="showAll()">ALL</button>
+<button onclick="showNone()">NONE</button>
+<button onclick="showAll()">RESET</button>
+<br>
+<button onclick="toggleCircle('circle01')">01</button><button onclick="toggleCircle('circle02')">02</button><button onclick="toggleCircle('circle03')">03</button><button onclick="toggleCircle('circle04')">04</button><button onclick="toggleCircle('circle05')">05</button><button onclick="toggleCircle('circle06')">06</button><button onclick="toggleCircle('circle07')">07</button><button onclick="toggleCircle('circle08')">08</button><button onclick="toggleCircle('circle09')">09</button><button onclick="toggleCircle('circle10')">10</button><button onclick="toggleCircle('circle11')">11</button><button onclick="toggleCircle('circle12')">12</button>
+
+</div>
+
+<div class="export-row">
+<strong>Export</strong>
+<select id="exportType">
+<option value="image/png">PNG</option>
+<option value="image/jpeg">JPEG</option>
+</select>
+<select id="exportSize">
+<option value="1024" selected>Apple Master 1024 × 1024</option>
+<option value="180">iPhone App 180 × 180</option>
+<option value="167">iPad Pro App 167 × 167</option>
+<option value="152">iPad App 152 × 152</option>
+<option value="120">Spotlight / App 120 × 120</option>
+<option value="87">Settings 87 × 87</option>
+<option value="80">Spotlight 80 × 80</option>
+<option value="76">iPad 76 × 76</option>
+<option value="60">Notification 60 × 60</option>
+<option value="58">Settings 58 × 58</option>
+<option value="40">Spotlight / Notification 40 × 40</option>
+<option value="29">Settings 29 × 29</option>
+<option value="20">Notification 20 × 20</option>
+<option value="512">macOS 512 × 512</option>
+<option value="256">macOS 256 × 256</option>
+<option value="128">macOS 128 × 128</option>
+<option value="32">macOS 32 × 32</option>
+<option value="16">macOS 16 × 16</option>
+<option value="2048">Large 2048 × 2048</option>
+<option value="3000">Large 3000 × 3000</option>
+</select>
+<button onclick="downloadLogo()">DOWNLOAD</button>
+<button onclick="downloadApplePack()">APPLE PACK</button>
+</div>
+
+</div>
+
+<script>
+document.getElementById('bgPicker').addEventListener('input',e=>{document.body.style.backgroundImage='none';document.body.style.backgroundColor=e.target.value;bgHex.value=e.target.value;});
+document.getElementById('bgImage').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=x=>{document.body.style.backgroundImage=`url(${x.target.result})`;document.body.style.backgroundSize='cover';document.body.style.backgroundPosition='center';};r.readAsDataURL(f);});
+</script>
+
+<script>
+const logoCircles=[...document.querySelectorAll('.click-circle')];
+function showAll(){logoCircles.forEach(c=>c.style.opacity='1');}
+function showNone(){logoCircles.forEach(c=>c.style.opacity='0.18');}
+function toggleCircle(id){
+ const c=document.getElementById(id);
+ c.style.opacity=(c.style.opacity===''||c.style.opacity==='1')?'0.18':'1';
+}
+showAll();
+
+
+function renderLogo(size,type,callback){
+ const svg=document.querySelector('svg');
+ const canvas=document.createElement('canvas');
+ canvas.width=size;
+ canvas.height=size;
+ const ctx=canvas.getContext('2d');
+
+ const bg=getComputedStyle(document.body).backgroundColor;
+ ctx.fillStyle=bg;
+ ctx.fillRect(0,0,size,size);
+
+ const svgClone=svg.cloneNode(true);
+ svgClone.setAttribute('width',size);
+ svgClone.setAttribute('height',size);
+
+ const serializer=new XMLSerializer();
+ const svgString=serializer.serializeToString(svgClone);
+ const blob=new Blob([svgString],{type:'image/svg+xml;charset=utf-8'});
+ const url=URL.createObjectURL(blob);
+ const img=new Image();
+
+ img.onload=function(){
+   ctx.drawImage(img,0,0,size,size);
+   URL.revokeObjectURL(url);
+   callback(canvas.toDataURL(type,0.95));
+ };
+
+ img.src=url;
+}
+
+function downloadLogo(){
+ const size=parseInt(document.getElementById('exportSize').value,10);
+ const type=document.getElementById('exportType').value;
+ const ext=type==='image/jpeg'?'jpg':'png';
+
+ renderLogo(size,type,function(dataUrl){
+   const link=document.createElement('a');
+   link.download=`liveit-circle-${size}.${ext}`;
+   link.href=dataUrl;
+   link.click();
+ });
+}
+
+function downloadApplePack(){
+ const type=document.getElementById('exportType').value;
+ const ext=type==='image/jpeg'?'jpg':'png';
+ const appleSizes=[
+   1024,
+   180,
+   167,
+   152,
+   120,
+   87,
+   80,
+   76,
+   60,
+   58,
+   40,
+   29,
+   20,
+   512,
+   256,
+   128,
+   32,
+   16
+ ];
+
+ appleSizes.forEach((size,index)=>{
+   setTimeout(()=>{
+     renderLogo(size,type,function(dataUrl){
+       const link=document.createElement('a');
+       link.download=`liveit-apple-${size}x${size}.${ext}`;
+       link.href=dataUrl;
+       link.click();
+     });
+   },index*250);
+ });
+}
+</script>
+
+</body>
+</html>
